@@ -1,6 +1,7 @@
 packages:
   - "apps/**"
   - "!apps/backend/.medusa/**"
+  - "packages/**"
 
 # pnpm 11+
 allowBuilds:
