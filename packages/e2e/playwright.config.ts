@@ -17,4 +17,15 @@ export default defineConfig({
     baseURL: process.env.NEXT_PUBLIC_BASE_URL ?? "http://localhost:9000",
     trace: "retain-on-failure",
   },
+  projects: [
+    {
+      name: "smoke",
+      testMatch: /.*\.spec\.ts/,
+      dependencies: ["admin-setup"],
+    },
+    {
+      name: "admin-setup",
+      testMatch: /admin\.setup\.ts/,
+    },
+  ],
 });

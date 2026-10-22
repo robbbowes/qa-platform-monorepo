@@ -1,7 +1,9 @@
 import { test, expect } from "@playwright/test";
 
-test("homepage has title", async ({ page }) => {
-  await page.goto("/app");
+test.use({ storageState: './.auth/admin.json' });
 
-  await expect(page).toHaveTitle(/Welcome to Medusa/, { timeout: 15_000 });
+test("homepage has title", async ({ page }) => {
+  await page.goto("/app/orders");
+
+  await expect(page.locator('button').getByText('admin@test.com')).toBeVisible({ timeout: 15_000 });
 });

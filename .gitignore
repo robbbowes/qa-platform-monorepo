@@ -57,3 +57,6 @@ Thumbs.db
 **/.DS_Store
 
 packages/e2e/test-results
+packages/e2e/test-results.json
+packages/e2e/playwright-report/*
+packages/e2e/.auth
